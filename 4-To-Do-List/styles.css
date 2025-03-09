@@ -1,0 +1,171 @@
+body {
+    background: url('bgimg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.wrapper {
+    background: rgb(248, 215, 215);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(4, 4, 4, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    color: #ed669e;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Input and Add Button */
+.task-input {
+    display: flex;
+    gap: 10px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    font-size: 14px;
+}
+
+.task-input input:focus {
+    border-color: #fcfbfe;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.task-input button {
+    padding: 10px 15px;
+    border: none;
+    background: #94eade;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.task-input button:hover {
+    background: #88bcb5;
+}
+
+/* Task List */
+#task-box {
+    color: #ed669e;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* Task Item */
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.task:hover {
+    transform: scale(1.02);
+}
+
+/* Task Text */
+.task p {
+    margin: 0;
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Checked Task */
+.checked {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Task Buttons */
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.complete-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 6px 8px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+/* Complete Button */
+.complete-btn {
+    color: #28a745;
+    background: rgba(40, 167, 69, 0.1);
+}
+
+.complete-btn:hover {
+    background: rgba(40, 167, 69, 0.3);
+}
+
+/* Delete Button */
+.delete-btn {
+    color: #dc3545;
+    background: rgba(220, 53, 69, 0.1);
+}
+
+.delete-btn:hover {
+    background: rgba(220, 53, 69, 0.3);
+}
+
+/* Clear All Button */
+#clear-btn {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #F28C8C ;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+#clear-btn:hover {
+    background: #cea1a1;
+}
+
+/* Scrollbar Styling */
+#task-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+#task-box::-webkit-scrollbar-thumb {
+    background: #f6f4f8;
+    border-radius: 5px;
+}
+
+#task-box::-webkit-scrollbar-thumb:hover {
+    background: #e4e3e6;
+}
